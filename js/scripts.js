@@ -24,16 +24,34 @@ function robogerify(number) {
     }
   });
 
-  return roboArray.join(", ");
+  return roboArray;
 } 
 
 // UI Logic 
+
+function listDescending() {
+  const orderInput = document.querySelector("input[name='order']:checked").value;
+  console.log(orderInput);
+  if (orderInput === "descending") {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function updateOutput() {
   const p = document.querySelector("p");
   p.textContent = "";
   const numberInput = document.getElementById("input").value;
-  p.innerText = robogerify(numberInput);
+
+  let outputText; 
+  if (listDescending()) { 
+    outputText = robogerify(numberInput).reverse().join(", ");
+  } else {
+    outputText = robogerify(numberInput).join(", ");
+  }
+
+  p.append(outputText);
 }
 
 window.addEventListener("load", function() {
