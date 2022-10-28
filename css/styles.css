@@ -1,3 +1,47 @@
 .hidden {
   display: none;
 }
+
+body {
+  background-color: cornsilk;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color:floralwhite;
+}
+
+#banner-pic {
+  float: center;
+  width: 200px;
+  height: auto;
+  margin: 5px;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+  border: solid 5px;
+  border-radius: 10px 10px 10px 10px;
+  opacity: 50%;
+}
+
+#banner-title {
+  font-weight: 900;
+  opacity: 100%;
+}
+
+#results {
+  text-align: center;
+  font-weight: 1000;
+  color:antiquewhite;
+  border-radius: 10%;
+  /* -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: black; */
+  background-color:darkred;
+  padding: 10px;
+}
+
+.button-container {
+  text-align: center;
+}
