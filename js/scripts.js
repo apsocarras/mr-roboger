@@ -10,14 +10,15 @@ function robogerify(number) {
     if (num.toString().includes("3")) {
       roboArray.push("Won't you be my neighbor?");
     } else if (num.toString().includes("2")) { 
-      roboArray.push("Boop!");
+      roboArray.push("Boop!"); 
+    } else if (num.toString().includes("1")) {
+      roboArray.push("Beep!");
     } else {
       roboArray.push(num);
     }
   });
   return roboArray;
 }
-
 
 // UI Logic 
 

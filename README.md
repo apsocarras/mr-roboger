@@ -41,12 +41,6 @@ Test: "It will return such an array with numbers that contain 1 but not 2 replac
 Code: robogerify(23)
 Expected Output: [0,'Beep!','Boop!','Won't you be my neighbor?',4,5,6,7,8,9,'Beep!','Beep!','Boop!','Won't you be my neighbor?','Beep!','Beep!','Beep!','Beep!','Beep!','Beep!','Boop!','Boop!','Boop!','Won't you be my neighbor?']
 
-Describe: displayList()
-
-Test: "It will take the array from robogerify() and display it as a list (i.e., comma-separated string) to the user." 
-Code: displayList([0,'Beep!','Boop!','Won't you be my neighbor?'])
-Expected Output: 0,'Beep!','Boop!','Won't you be my neighbor?'
-
 ```
 
 ## License
