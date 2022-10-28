@@ -1,24 +1,45 @@
-# _{Repo Name}_
+# _Mr. Roboger's Neighborhood_
 
-#### By _**{Author}**_
+#### By _Alejandro Socarras_
 
-#### _{Brief Description}_
+#### _Turn a number into a "Mr. Roboger's" count-a-long._
 
 ## Technologies Used
 
-* {List}
+* HTML
+* CSS 
+* Bootstrap
+* JS
 
 ## Description
 
-_{More detailed information about contents}_
+_This webpage takes a number input from the user and displays a list counting up to that number from 0, replacing certain numbers according to the following rules:_
+
+* For numbers that contain a 3, all digits are replaced with "Won't you be my neighbor?"
+
+* For numbers that contain a 2, all digits are replaced with "Boop!"
+
+* For numbers that contain a 1, all digits are replaced with "Beep!"
+
+_For numbers meeting more than one of these conditions, the rules are applied in the order they were given above._
 
 ## Setup/Installation Requirements
 
-_{"N/A" if setup/install not required}_
+_To run the project from your local system:_
+
+1. Make a directory on your disk where you would like to clone the repo.
+
+2. Copy the repo link: https://github.com/apsocarras/language-suggest.git (available if you click the green "Code" dropdown button on this page).
+
+3. Open your terminal and change into the directory you made (`cd /path/to/new/directory`).
+
+4. Type `git clone ` and paste the URL.
+
+5. Copy and paste the path to `index.html` into your browser's URL bar to open the page.
 
 ## Known Bugs
 
-_{"No known bugs" if none}_
+_No known Bugs._
 
 ## Tests
 
@@ -51,4 +72,4 @@ Expected Output: 0,"Beep!","Boop!","Won't you be my neighbor?"
 
 _[MIT License](https://opensource.org/licenses/MIT)_
 
-Copyright (c) _<DATE>_ {Author}
+Copyright (c) _10.28.22_ {Author}
