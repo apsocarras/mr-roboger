@@ -2,7 +2,7 @@
 
 function robogerify(number) {
 
-  if (!parseInt(number) || /^0-9/.test(number)) {
+  if (/[^0-9]/.test(number)) {
     return "Error: '" + number + "' is not a natural number."
   }
 
