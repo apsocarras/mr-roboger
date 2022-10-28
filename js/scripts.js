@@ -25,14 +25,18 @@ function robogerify(number) {
 
 // UI Logic 
 
+function updateOutput() {
+  const p = document.querySelector("p");
+  p.textContent = "";
+  const numberInput = document.getElementById("input").value;
+  p.innerText = robogerify(numberInput);
+}
+
 window.addEventListener("load", function() {
   let form = document.querySelector("form");
-
   form.addEventListener("submit", function(event) {
     event.preventDefault();
-    const numberInput = document.getElementById("input").value;
-
-    
-
+    updateOutput();
   });
 });
+
