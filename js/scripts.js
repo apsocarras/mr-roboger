@@ -1,6 +1,6 @@
 // Business Logic
 
-function robogerify(number) {
+function robogerify(number, name) {
 
   if (/[^0-9]/.test(number)) {
     return "Error: '" + number + "' is not a natural number."
@@ -14,7 +14,11 @@ function robogerify(number) {
   let roboArray = [];
   numArray.forEach(function(num) {
     if (num.toString().includes("3")) {
+      if (name) {
+      roboArray.push("Won't you be my neighbor, " + name.trim() + "?");
+      } else {
       roboArray.push("Won't you be my neighbor?");
+      }
     } else if (num.toString().includes("2")) { 
       roboArray.push("Boop!"); 
     } else if (num.toString().includes("1")) {num
@@ -31,7 +35,6 @@ function robogerify(number) {
 
 function listDescending() {
   const orderInput = document.querySelector("input[name='order']:checked").value;
-  console.log(orderInput);
   if (orderInput === "descending") {
     return true;
   } else {
@@ -42,20 +45,21 @@ function listDescending() {
 function updateOutput() {
   const p = document.querySelector("p");
   p.textContent = "";
-  const numberInput = document.getElementById("input").value;
+  const numberInput = document.getElementById("field1Input").value;
+  const nameInput = document.getElementById("field2Input").value;
 
   let outputText; 
   if (listDescending()) { 
-    outputText = robogerify(numberInput).reverse().join(", ");
+    outputText = robogerify(numberInput,nameInput).reverse().join(" — ");
   } else {
-    outputText = robogerify(numberInput).join(", ");
+    outputText = robogerify(numberInput,nameInput).join(" — ");
   }
 
   p.append(outputText);
 }
 
 window.addEventListener("load", function() {
-  let form = document.querySelector("form");
+  const form = document.querySelector("form");
   form.addEventListener("submit", function(event) {
     event.preventDefault();
     updateOutput();

@@ -69,6 +69,12 @@ Expected Output: 0,"Beep!","Boop!","Won't you be my neighbor?"
 Test: "It will return an error message if anything but a natural (i.e., counting) number has been entered." 
 Code: robogerify("$23")
 Expected Output: Error: '$23' is not a natural number.
+
+Test: "It will change elements equaling 'Won't you be my neighbor?' to 'Won't you you be my neighbor, ____?' where '____' is a non-empty string provided by the user." 
+Code: robogerify("3","Ralph")
+Expected Output: 0,"Beep!", "Boop!", "Won't you be my neighbor, Ralph?"
+
+
 ```
 
 ## License
