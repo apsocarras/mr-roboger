@@ -3,13 +3,6 @@
   text-align: center;
 }
 
-#clippy-pic img {
-  width: 200px;
-  float: center;
-  border-radius: 80;
-}
-
-
 body {
   background-color: cornsilk;
   text-align: center;
@@ -21,6 +14,12 @@ body {
   height: auto;
   margin: 5px;
   border: 5px solid gold; 
+}
+
+#clippy-pic img {
+  width: 200px;
+  float: center;
+  border-radius: 80;
 }
 
 .card {
