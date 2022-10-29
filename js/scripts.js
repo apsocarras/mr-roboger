@@ -21,7 +21,7 @@ function robogerify(number, name) {
       }
     } else if (num.toString().includes("2")) { 
       roboArray.push("Boop!"); 
-    } else if (num.toString().includes("1")) {num
+    } else if (num.toString().includes("1")) {
       roboArray.push("Beep!");
     } else {
       roboArray.push(num);
@@ -60,9 +60,25 @@ function updateOutput() {
 
 window.addEventListener("load", function() {
   const form = document.querySelector("form");
+  const bannerTitle = document.getElementById("banner-title");
+  const bannerImage = document.getElementById("clippy-pic");
+
   form.addEventListener("submit", function(event) {
     event.preventDefault();
     updateOutput();
   });
+
+  bannerTitle.addEventListener("mouseover", function(event) {
+    event.preventDefault();
+    bannerTitle.innerText = "Won't you be my neighbor?";
+    bannerImage.removeAttribute("class");
+  });
+
+  bannerTitle.addEventListener("mouseout", function(event) {
+    event.preventDefault();
+    bannerTitle.innerText = "01010111 01101111 01101110 00100111 01110100 00100000 01111001 01101111 01110101 00100000 01100010 01100101 00100000 01101101 01111001 00100000 01101110 01100101 01101001 01100111 01101000 01100010 01101111 01110010 00111111?";
+    bannerImage.setAttribute("class", "hidden");
+  });
+
 });
 
