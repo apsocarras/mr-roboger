@@ -2,10 +2,6 @@
 
 function robogerify(number, name) {
 
-  if (/[^0-9]/.test(number)) {
-    return "Error: '" + number + "' is not a natural number."
-  }
-
   let numArray = [];
   for (let i = 0; i <= number; i++) {
     numArray.push(i);
@@ -48,8 +44,10 @@ function updateOutput() {
   const numberInput = document.getElementById("field1Input").value;
   const nameInput = document.getElementById("field2Input").value;
 
-  let outputText; 
-  if (listDescending()) { 
+  let outputText;
+  if (/[^0-9]/.test(numberInput)) {
+    outputText = "Error: '" + numberInput + "' is not a natural number."
+  } else if (listDescending()) { 
     outputText = robogerify(numberInput,nameInput).reverse().join(" — ");
   } else {
     outputText = robogerify(numberInput,nameInput).join(" — ");
