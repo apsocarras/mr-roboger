@@ -39,8 +39,8 @@ function listDescending() {
 }
 
 function updateOutput() {
-  const p = document.querySelector("p");
-  p.textContent = "";
+  const outputParagraph = document.getElementById("outputParagraph");
+  outputParagraph.textContent = "";
   const numberInput = document.getElementById("field1Input").value;
   const nameInput = document.getElementById("field2Input").value;
 
@@ -53,11 +53,12 @@ function updateOutput() {
     outputText = robogerify(numberInput,nameInput).join(" — ");
   }
 
-  p.append(outputText);
+  outputParagraph.append(outputText);
 }
 
 window.addEventListener("load", function() {
   const form = document.querySelector("form");
+  const randButton = document.getElementById("randButton");
   const bannerTitle = document.getElementById("banner-title");
   const clippyPic = document.getElementById("clippy-pic");
 
@@ -76,6 +77,11 @@ window.addEventListener("load", function() {
     event.preventDefault();
     bannerTitle.innerText = "01010111 01101111 01101110 00100111 01110100 00100000 01111001 01101111 01110101 00100000 01100010 01100101 00100000 01101101 01111001 00100000 01101110 01100101 01101001 01100111 01101000 01100010 01101111 01110010 00111111?";
     clippyPic.setAttribute("class", "hidden");
+  });
+
+  randButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    document.getElementById("field1Input").value = Math.floor(Math.random() * 100);
   });
 
 });
